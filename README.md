@@ -30,16 +30,18 @@ Ejecuta las pruebas:
 
 ## Estructura del Proyecto
 
-La estructura de carpetas del proyecto está diseñada para facilitar la organización y la escritura de pruebas:
+La estructura de carpetas del proyecto está diseñada para una organización clara y efectiva:
 
 - `/cypress`: Contiene todas las pruebas y configuraciones de Cypress.
-  - `/e2e`: Scripts de pruebas organizados por funcionalidades.
+  - `/e2e`: Directorio principal para las pruebas end-to-end.
+    - `/Elements`: Almacena los selectores específicos de elementos utilizados en las pruebas.
     - `/features`: Archivos `.feature` que describen las pruebas en un formato legible.
     - `/pages`: Modelos de página para aplicar el patrón Page Object Model.
-    - `/step_definitions`: Definiciones de los pasos de Cucumber para cada característica.
-  - `/fixtures`: Datos y configuraciones que pueden ser utilizados durante las pruebas.
-  - `/screenshots`: Capturas de pantalla tomadas automáticamente cuando las pruebas fallan.
+    - `/step_definitions`: Definiciones de pasos para Cucumber correspondientes a cada característica.
+  - `/fixtures`: Datos estáticos que pueden ser utilizados durante las pruebas.
+  - `/screenshots`: Capturas de pantalla que se almacenan automáticamente cuando las pruebas fallan.
   - `/support`: Contiene archivos de soporte, como comandos personalizados o configuraciones generales de Cypress.
+
 
 ## Generación de Reportes
 
