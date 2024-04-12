@@ -19,12 +19,12 @@ Para configurar el proyecto y comenzar a correr las pruebas, sigue los siguiente
 
 
 Instala las dependencias:
-    ```bash
+    ```
     npm install
     ```
 
 Ejecuta las pruebas:
-    ```bash
+    ```
     npx cypress run
     ```
 
@@ -45,6 +45,6 @@ La estructura de carpetas del proyecto está diseñada para facilitar la organiz
 
 Para generar y visualizar los reportes de Allure, ejecuta los siguientes comandos después de completar las pruebas:
 
-```bash
+```
 allure generate --clean
 allure open
