@@ -1,48 +1,53 @@
-class ComprarArticuloPage {
-    elements = {
-        btnAddCart: () => cy.get("#add-to-cart-sauce-labs-backpack"),
-        btnGoCart: () => cy.get(".shopping_cart_link"),
-        btnChekout: () => cy.get("#checkout"),
-        txtName: () => cy.get("#first-name"),
-        txtLastName: () => cy.get("#last-name"),
-        txtCodePostal: () => cy.get("#postal-code"),
-        btnContinue: () => cy.get("#continue"),
-        btnFinish: () => cy.get("#finish"),
-    };
+import { ComprarElements } from "../Elements/comprarArticuloElements";
+export class ComprarArticuloSteps {
 
-    typeBtnAddCart() {
-        this.elements.btnAddCart().click();
+    static btnAddCart() {
+        ComprarElements.buttons.btnAddCart.click();
     }
 
-    typeBtnGoCart() {
-        this.elements.btnGoCart().click();
+    static btnGoCart() {
+        ComprarElements.buttons.btnGoCart.click();
     }
 
-    typeBtnCheckOut() {
-        this.elements.btnChekout().click();
+    static btnChekOut() {
+        ComprarElements.buttons.btnCheckOut.click();
+    }
+
+    static txtName(name) {
+        return ComprarElements.inputText.Name.type(name);
+    }
+    static txtLastName(lastName) {
+        return ComprarElements.inputText.lastName.type(lastName);
+    }
+
+    static txtCodePostal(codePostal){
+        return ComprarElements.inputText.codePostal.type(codePostal)
+    }
+
+    static btnContinue() {
+        ComprarElements.buttons.btnContinue.click();
+    }
+    static btnFinish() {
+        ComprarElements.buttons.btnFinish.click();
+    }
+
+
+    static Acceder() {
+        this.btnAddCart();
+        this.btnGoCart();
+        this.btnChekOut();
+    }
+    static Comprar(name,lastName,codePostal) {
+        this.txtName(name);
+        this.txtLastName(lastName);
+        this.txtCodePostal(codePostal);
     }
     
-    typeName(Name) {
-        this.elements.txtName().type(Name);
+    static Finalizar() {
+        this.btnContinue();
+        this.btnFinish();
     }
 
-    typeLastName(lastName) {
-        this.elements.txtLastName().type(lastName);
-    }
-
-    typeCodePostal (codePostal) {
-        this.elements.txtCodePostal().type(codePostal);
-    }
-
-    
-    typeBtnContinue() {
-        this.elements.btnContinue().click();
-    }
-    
-    typeBtnFinish() {
-        this.elements.btnFinish().click();
-    }
 
 }
 
-export const comprarArticuloPage = new ComprarArticuloPage();
