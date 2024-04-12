@@ -42,10 +42,11 @@ export class ComprarArticuloSteps {
         this.txtLastName(lastName);
         this.txtCodePostal(codePostal);
     }
-    
+
     static Finalizar() {
         this.btnContinue();
         this.btnFinish();
+        cy.get(".complete-header").should("have.text", 'Thank you for your order!');
     }
 
 
