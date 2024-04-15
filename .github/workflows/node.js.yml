@@ -28,4 +28,4 @@ jobs:
           npm install --save-dev cypress cucumber
 
       - name: Run tests
-        run: npx cypress run --features features --cucumber-opts='--format=json'
+        run: npx cypress run --headed
