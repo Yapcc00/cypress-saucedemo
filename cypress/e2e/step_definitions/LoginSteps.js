@@ -19,6 +19,5 @@ Then('para comprar un articulo y finalizar la compra {string} {string} {string}'
   cy.wait(1000);
   ComprarArticuloSteps.Comprar(name, lastName, codePostal);
   ComprarArticuloSteps.Finalizar();
-
   cy.screenshot();
 });
